@@ -2,10 +2,14 @@
 # elements in an iterable:
 
 import collections
-c = collections.Counter('helloworld')
+import numpy as np
 
-print(c)
+data = [int(x) for x in 10*np.random.randn(1000000)]
 
-print(c.most_common(3))
+c = collections.Counter(data)
+
+#print('data = %r' % (data))
+#print(c)
+print(c.most_common(10))
 
 
